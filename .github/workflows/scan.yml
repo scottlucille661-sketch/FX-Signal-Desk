@@ -1,9 +1,11 @@
+
 name: scan
-# Looks for setups every 15 minutes on weekdays and sends graded ones to Telegram.
+
+# Looks for setups every 5 minutes on weekdays and sends graded ones to Telegram.
 on:
+  workflow_dispatch:
   schedule:
     - cron: "*/5 * * * 1-5"
-  workflow_dispatch:
 
 permissions:
   contents: read
